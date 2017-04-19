@@ -62,7 +62,10 @@ public class mainPvP implements Listener
 	public void onDeath(PlayerDeathEvent event)
 	{
 		Player player = event.getPlayer();
-		// (have to fix) player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
+		if(player.isDead())
+		{
+		player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
+		}
 	}
 }
 	

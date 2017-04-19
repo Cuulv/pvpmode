@@ -61,8 +61,8 @@ public class mainPvP implements Listener
 	@EventHandler
 	public void onDeath(PlayerDeathEvent event)
 	{
-		Player player = event.getEntity();
-		// player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
+		Player player = event.getPlayer();
+		// (have to fix) player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
 	}
 }
 	

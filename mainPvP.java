@@ -26,7 +26,7 @@ public class mainPvP implements Listener
 		player.setMetadata("PvPMode", new FixedMetadataValue(instance, true));
 		player.setCanPickupItems(false);
 		
-		if(player.getHealth() <= 3.5)
+		if(player.getHealth() <= 7)
 		{
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 100, 2));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 2));
@@ -34,7 +34,15 @@ public class mainPvP implements Listener
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 20, 2));
 			player.sendMessage(ChatColor.GREEN + "[Cuulv]" + ChatColor.GOLD + "You are hurt, bad! Don't worry, though. I supplied potion effects to help!");
 		}
-		
+		else if(player.getHealth() <= 4)
+		{
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 30, 3));
+			player.sendMessage(ChatColor.GREEN + "[Cuulv]" + ChatColor.GOLD + "You are hurt, bad! Don't worry, though. I supplied potion effects to help!");
+		}
+		else
+		{
+			return;
+		}
 		}
 	}
 	

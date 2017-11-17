@@ -14,7 +14,15 @@ public class pvpMode implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
 		
-		if(cmd.getName().equalsIgnoreCase("pvpmode") || cmd.getName().equalsIgnoreCase("pvp"))
+		int funnyMathCommand = (9 + 10);
+		
+		if(cmd.getName().equalsIgnoreCase("funnymath"))
+		{
+			sender.sendMessage("Hey, what's Nine + Ten?");
+			sender.sendMessage(funnyMathCommand);
+			send.sendMessage("WRONG! It's 21.");
+		
+		else if(cmd.getName().equalsIgnoreCase("pvpmode") || cmd.getName().equalsIgnoreCase("pvp"))
 		{
 			if(args.length == 0)
 			{

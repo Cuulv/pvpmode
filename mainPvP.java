@@ -64,6 +64,11 @@ public class mainPvP implements Listener
 		{
 			event.setCancelled(true);
 		}
+		else
+		{
+			event.setCancelled(false);
+			return true;
+		}
 	}
 	
 	@EventHandler
@@ -73,6 +78,7 @@ public class mainPvP implements Listener
 		if(player.isDead())
 		{
 		player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
+		return true; 
 		}
 	}
 }
